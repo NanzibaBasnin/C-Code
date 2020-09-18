@@ -1,15 +1,28 @@
-#include<bits/stdc++.h>
+
+#include<stdio.h>
+#include<iostream>
+#include<math.h>
 using namespace std;
 int main()
 {
-    int n;
-    cin>> n;
-    for(int i=1; i<=2;i++)
+    int n, i;
+    int f=0;
+    cin >> n;
+    for(i=2; i<=sqrt(n); i++)
     {
         if(n%i==0)
         {
-            cout<<" "<<i;
+            //printf("")
+            f=1;
+            break;
         }
     }
-      cout<<" "<<n;
+    if(f==1)
+    {
+        printf("is not prime");
+    }
+    else
+    {
+        printf("is prime");
+    }
 }
